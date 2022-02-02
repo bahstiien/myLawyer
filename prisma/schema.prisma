@@ -19,8 +19,8 @@ model user {
 }
 
 model article {
-  id          Int    @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   title       String
-  description String @db.LongText
-  link        String
+  description String  @db.LongText
+  link        String?
 }

@@ -5,7 +5,7 @@ import Welcome from "../components/Welcome";
 import Skill from "../components/Skill";
 import News from "../components/News";
 import Contact from "../components/Contact";
-import Layout from "../Components/Layout";
+import Layout from "../components/Layout/Layout";
 
 export default function Home() {
   return (

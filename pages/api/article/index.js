@@ -1,0 +1,22 @@
+import base from "../../../middlewares/commons";
+
+import {
+  ValidateArticle,
+  getArticles,
+  createArticle,
+} from "../../../models/article.jsx";
+
+const handleGet = async (req, res) => {
+  res.send(await getArticles());
+};
+
+async function handlePost(req, res) {
+  const validationError = ValidateArticle(req.body);
+  if (validationError) return res.status(422).send(validationError);
+  const newArticle = await createArticle({
+    ...req.body,
+  });
+  res.status(201).send(newArticle);
+}
+
+export default base().post(handlePost).get(handleGet);

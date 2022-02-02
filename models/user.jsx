@@ -29,6 +29,10 @@ const validateUser = (data, forUpdate = false) => {
   }).validate(data, { abortEarly: false }).error;
 };
 
+const findByEmail = async (email = "") => {
+  return await db.user.findUnique({ where: { email } });
+};
+
 const create = async ({ name, email, password }) => {
   const hashedPassword = await hashPassword(password);
   return db.user.create({
@@ -51,4 +55,5 @@ module.exports = {
   validateUser,
   create,
   getSafeAttributes,
+  findByEmail,
 };

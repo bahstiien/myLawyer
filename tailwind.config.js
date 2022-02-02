@@ -17,6 +17,7 @@ module.exports = {
         four: "#798777",
         five: "#5B8A72",
         six: "#56776C",
+        seven: "#2e403a",
       },
     },
     plugins: [],

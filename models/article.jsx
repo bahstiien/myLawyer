@@ -6,6 +6,9 @@ const ValidateArticle = (data, forUpdate = false) => {
     title: Joi.string().presence(forUpdate ? "optional" : "required"),
     description: Joi.string().presence(forUpdate ? "optional" : "required"),
     link: Joi.string().presence(forUpdate ? "optional" : "required"),
+    summary: Joi.string()
+      .max(200)
+      .presence(forUpdate ? "optional" : "required"),
   }).validate(data, { abortEarly: false }).error;
 };
 
@@ -15,6 +18,7 @@ const articleToShow = {
   description: true,
   link: true,
   createDate: true,
+  summary: true,
 };
 
 const getArticles = async () => {
@@ -42,6 +46,7 @@ const createArticle = async ({ title, description, link }) => {
       title,
       description,
       link,
+      summary,
       createDate: new Date(Date.now()),
     },
   });

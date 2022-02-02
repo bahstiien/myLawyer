@@ -4,43 +4,47 @@ import CPLogo from "../public/img/cpLogoBlack.jpg";
 import CPLogoTransparent from "../public/img/cpLogoTransparent.png";
 import style from "../styles/NavBar.module.css";
 import Link from "next/link";
-
+import logo from "../public/img/cpLogoWithText.png";
 const Navbar = () => {
   return (
-    <div className="bg-one">
+    <div>
       <div className="antialiased ">
-        <div className="w-full text-gray-700 font-main fixed">
+        <div className="w-full text-green-700 font-main z-10 fixed">
           <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div className="flex flex-row items-center justify-between p-4">
-              <a
-                href="#"
-                className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
-              >
-                Flowtrail UI
-              </a>
+              <Link href="/">
+                <a className="text-lg font-semibold tracking-widest text-green-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
+                  <Image
+                    src={logo}
+                    height={130}
+                    width={195}
+                    alt="photo of cecile palavit"
+                  />
+                </a>
+              </Link>
               <button className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"></button>
             </div>
             <nav className="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
               <a
-                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold text-seven bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
                 href="#"
               >
                 Présentation
               </a>
               <a
-                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold text-seven bg-transparent rounded-lg    md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
                 href="#"
               >
-                Compétences
+                Domaines de compétences
               </a>
               <a
-                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg   md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold text-seven bg-transparent rounded-lg   md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
                 href="#"
               >
-                Actualités
+                Actualités / Publications
               </a>
               <a
-                className="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg    md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                className="px-4 py-2 mt-2 text-sm font-semibold text-seven bg-transparent rounded-lg    md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
                 href="#"
               >
                 Contact

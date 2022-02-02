@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 export default function Layout({ children, pageTitle }) {
   return (
@@ -9,7 +10,7 @@ export default function Layout({ children, pageTitle }) {
       <Navbar />
       <h1 className="font-second text-center text-5xl"> {pageTitle}</h1>
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -14,6 +14,7 @@ const articleToShow = {
   title: true,
   description: true,
   link: true,
+  createDate: true,
 };
 
 const getArticles = async () => {
@@ -41,6 +42,7 @@ const createArticle = async ({ title, description, link }) => {
       title,
       description,
       link,
+      createDate: new Date(Date.now()),
     },
   });
 };

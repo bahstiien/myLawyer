@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import AdminLayout from "../components/Layout/AdminLayout";
-import Layout from "../components/Layout/Layout";
+import AdminLayout from "../../components/Layout/AdminLayout";
+import Layout from "../../components/Layout/Layout";
 import Link from "next/link";
 import axios from "axios";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import style from "../styles/dashboard.module.css";
+import style from "../../styles/dashboard.module.css";
+import stylebtn from "../../styles/button.module.css";
+import dayjs from "dayjs";
 
 const Dashboard = () => {
   const [articles, setArticles] = useState([]);
@@ -27,25 +29,38 @@ const Dashboard = () => {
   };
   return (
     <div className="bg-one">
-      <Layout>
+      <Layout pageTitle="Dashboard">
         <AdminLayout>
-          <h1>Mes Articles</h1>
-          <div className="flex">
-            {articles.map(({ id, title, description, link }) => (
-              //   <div className="bg-one w-1/3 m-2 p-4 rounded-xl" key={id}>
+          <Link href="dashboard/newArticle" passHref>
+            <button className={stylebtn.button}>
+              <span>Nouvel article</span>
+            </button>
+          </Link>
+          <div className="flex justify-center flex-wrap shadow-5xl">
+            {articles.map(({ id, title, description, link, createDate }) => (
               <div className={style.card} key={id}>
-                <div className="flex justify-around m-4">
-                  <h3 className={style.title}>{title}</h3>
+                <div className="flex justify-between mb-4">
+                  <span className={style.id}> article# {id}</span>
+                  <span className={style.id}>
+                    publié le {dayjs(createDate).format("DD/MM/YYYY")}
+                  </span>
+
                   <div className="ml-4">
-                    <EditOutlined style={{ fontSize: "24px" }} />
+                    <Link href={`dashboard/${id}`} passHref>
+                      <EditOutlined
+                        style={{ fontSize: "24px" }}
+                        className="mx-8"
+                      />
+                    </Link>
                     <DeleteOutlined
                       style={{ fontSize: "24px" }}
                       onClick={() => deleteArticle(id)}
                     />
                   </div>
                 </div>
+                <h3 className={style.title}>{title}</h3>
                 <p>{description}</p>
-                <p className="m-8"> {link}</p>
+                <p className={style.link}> {link}</p>
               </div>
             ))}
           </div>

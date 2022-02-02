@@ -1,0 +1,14 @@
+.label {
+  font-size: x-large;
+  margin-left: 5rem;
+}
+
+.input {
+  display: block;
+  height: 5rem;
+  width: 100%;
+  background-color: #e9dac1;
+  border-radius: 5px;
+  margin: 10px;
+  padding-left: 2em;
+}

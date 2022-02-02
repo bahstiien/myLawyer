@@ -1,0 +1,17 @@
+.card {
+  background-color: #bfcba8;
+  width: 30%;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 35px;
+}
+
+.title {
+  font-size: x-large;
+  text-align: center;
+}
+
+.link {
+  font-size: medium;
+  border: solid 1px;
+}

@@ -40,7 +40,7 @@ const deleteOneArticle = (id) => {
     .catch((_) => false);
 };
 
-const createArticle = async ({ title, description, link }) => {
+const createArticle = async ({ title, description, link, summary }) => {
   return await db.article.create({
     data: {
       title,

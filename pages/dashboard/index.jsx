@@ -28,14 +28,16 @@ const Dashboard = () => {
     }
   };
   return (
-    <div className="bg-one">
+    <div className="">
       <Layout pageTitle="Dashboard">
         <AdminLayout>
-          <Link href="dashboard/newArticle" passHref>
-            <button className={stylebtn.button}>
-              <span>Nouvel article</span>
-            </button>
-          </Link>
+          <div className="pt-32 flex justify-center">
+            <Link href="dashboard/newArticle" passHref>
+              <button className={stylebtn.button}>
+                <span>Nouvel article</span>
+              </button>
+            </Link>
+          </div>
           <div className="flex justify-center flex-wrap shadow-5xl">
             {articles.map(({ id, title, description, link, createDate }) => (
               <div className={style.card} key={id}>

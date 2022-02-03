@@ -9,46 +9,56 @@ export default function ArticleDetails() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
+  const [summary, setSummary] = useState("");
 
   const onSubmit = (data) => {
-    axios.post("/api/article", { title, description, link });
+    axios.post("/api/article", { title, description, link, summary });
   };
 
   return (
-    <div className="bg-one">
+    <div className="">
       <Layout pageTitle="Nouvel article">
-        <div className="flex flex-col w-2/3">
-          <form className="justify-center font-main">
+        <div className="flex flex-col justify-center w-2/3 pt-32">
+          <form className="justify-center font-main ml-24">
             <div className="">
-              <div className="">
+              <div className="flex flex-col m-4">
                 <label className={style.label}>Titre de l&#39;article</label>
                 <input
-                  className={style.input}
+                  className="h-12 w-auto ml-2 rounded-xl bg-one"
                   type="text"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
               </div>
-              <div className="">
+              <div className="flex flex-col m-4">
                 <label className={style.label}>Description</label>
-                <input
-                  className={style.input}
+                <textarea
+                  className="h-96 w-auto ml-2 rounded-xl bg-one p-2"
                   type="text"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
               </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <label className={style.label}>Lien</label>
+
+              <div className="flex flex-col m-4">
+                {" "}
+                <label className={style.label}>Résumé rapide</label>
                 <input
-                  className={style.input}
+                  className="h-12 w-auto ml-2 rounded-xl bg-one"
                   type="text"
-                  value={link}
-                  onChange={(e) => setLink(e.target.value)}
+                  value={summary}
+                  onChange={(e) => setSummary(e.target.value)}
                 />
               </div>
+            </div>
+            <div className="flex flex-col m-4">
+              <label className={style.label}>Lien</label>
+              <input
+                className="h-12 w-auto ml-2 rounded-xl bg-one"
+                type="text"
+                value={link}
+                onChange={(e) => setLink(e.target.value)}
+              />
             </div>
             <button
               type="submit"

@@ -7,6 +7,7 @@ import News from "../components/News";
 import Contact from "../components/Contact";
 import Layout from "../components/Layout/Layout";
 import Price from "../components/Price";
+import Last from "../components/Last";
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
       <Layout>
         <Welcome />
         <Skill />
-        <Price />
         <News />
-        <Contact />
+        {/* <Contact /> */}
+        <Last />
       </Layout>
     </div>
   );

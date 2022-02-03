@@ -2,13 +2,12 @@ import Image from "next/image";
 import React from "react";
 import { ShopOutlined, HomeOutlined } from "@ant-design/icons";
 import building from "../public/img/building.png";
-import home from "../public/img/home.png";
 import brick from "../public/img/brick.png";
 import shop from "../public/img/shop.png";
 import document from "../public/img/document.png";
 const Skill = () => {
   return (
-    <section className="h-full w-full md:h-screen md:w-screen mt-36">
+    <section className="h-full w-full md:h-screen md:w-screen pt-36" id="Skill">
       <h2 className="font-third text-seven text-5xl text-center">
         Domaines de compétences
       </h2>

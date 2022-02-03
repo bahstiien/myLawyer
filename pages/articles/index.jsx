@@ -5,6 +5,8 @@ import style from "../../styles/articleList.module.css";
 import stylebtn from "../../styles/button.module.css";
 import Layout from "../../components/Layout/Layout";
 import dayjs from "dayjs";
+import Link from "next/link";
+import { RollbackOutlined } from "@ant-design/icons";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -33,12 +35,6 @@ const Articles = () => {
                 Publié le {dayjs(createDate).format("DD/MM/YYYY")} par Cécile
                 Palavit
               </span>
-              {/* <a
-                  className="px-2 py-1 bg-gray-600 text-gray-100 font-bold rounded hover:bg-gray-500"
-                  href="#"
-                >
-                  {}
-                </a> */}
             </div>
             <div className="mt-2">
               <a
@@ -48,6 +44,21 @@ const Articles = () => {
                 {title}
               </a>
               <p className="mt-2 text-gray-600">{description}</p>
+            </div>
+            <div className="mt-8 text-center">
+              <Link href={`${link}`} target="_blank" passHref>
+                <a target="_blank">
+                  Article complet publié dans la revue Le Moniteur
+                </a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/" passHref>
+                <a className="flex items-center ">
+                  <RollbackOutlined />
+                  <span className="ml-2">Retour</span>
+                </a>
+              </Link>
             </div>
           </div>
         ))}

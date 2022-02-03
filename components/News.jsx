@@ -20,11 +20,13 @@ const News = () => {
   }, []);
 
   return (
-    <div className="relative font-second pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-      <div className="absolute inset-0"></div>
+    <div
+      className="relative h-screen w-screen font-second pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      id="News"
+    >
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="font-third text-seven text-5xl text-center">
+          <h2 className="font-third text-seven text-5xl pt-8 text-center">
             Publications
           </h2>
         </div>
@@ -43,12 +45,12 @@ const News = () => {
                     <p className="mt-3 text-base text-gray-500">{summary}</p>
                   </p>
                 </div>
-                <div className="mt-6 flex items-center">
-                  <div className="ml-3">
-                    <div className="flex space-x-1 italic text-sm text-gray-500">
-                      Publié le {dayjs(createDate).format("DD/MM/YYYY")}
-                    </div>
-                    <Link href={`article/${id}`} passHref>
+                <div className="mt-6 flex items-center ml-3">
+                  <div className="flex space-x-1 italic text-sm text-gray-500 ">
+                    Publié le {dayjs(createDate).format("DD/MM/YYYY")}
+                  </div>
+                  <div className="flex justify-center">
+                    <Link href={`articles/${id}`} passHref>
                       <button className={stylebtn.button2}> Lire</button>
                     </Link>
                   </div>
@@ -56,27 +58,23 @@ const News = () => {
               </div>
             </div>
           ))}
+
+          <div className="bg-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
+            <div className="items-center flex flex-col justify-center">
+              <p className="text-xl font-semibold text-gray-900">
+                Retrouvez l&#39;ensemble de mes Publications
+              </p>
+              <div className="flex justify-center">
+                <Link href={`articles`} passHref>
+                  <button className={stylebtn.button2}> Lire</button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-// <section className=" h-screen w-screen">
-//   <h2 className="font-third text-seven text-5xl text-center">
-//     Publications
-//   </h2>
-//   <div className="flex justify-center flex-wrap shadow-5xl">
-//     {articles.map(({ id, title, description, link }) => (
-//         <div className="bg-one w-1/3 m-2 p-4 rounded-xl" key={id}>
-//       <div className={style.article} key={id}>
-//         <div>
-//           <h3 className={style.title}>{title}</h3>
-//         </div>
-
-//         <button className={stylebtn.button}> Lire l&#39;article</button>
-//       </div>
-//     ))}
-//   </div>
-// </section>
 
 export default News;

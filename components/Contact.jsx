@@ -3,8 +3,10 @@ import stylebtn from "../styles/button.module.css";
 
 const Contact = () => {
   return (
-    <section className=" h-screen w-screen font-main">
-      <h2 className="font-third text-seven text-5xl text-center">Contact</h2>
+    <section className=" font-main">
+      <h2 className="font-third text-seven text-5xl mt-8 text-center">
+        Contact
+      </h2>
 
       <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
         <form action="" method="post">
@@ -42,7 +44,7 @@ const Contact = () => {
               ></textarea>
             </div>
           </div>
-          <div className="flex items-center justify-center w-full mt-16">
+          <div className="flex items-center justify-center w-full mt-2">
             <button className={stylebtn.button}>Envoyez votre message</button>
           </div>
         </form>

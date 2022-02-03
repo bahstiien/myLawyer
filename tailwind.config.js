@@ -18,6 +18,7 @@ module.exports = {
         five: "#5B8A72",
         six: "#56776C",
         seven: "#2e403a",
+        nav: "#bdd2b6",
       },
     },
     plugins: [],

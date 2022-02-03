@@ -29,7 +29,7 @@
 
 .button:hover {
   color: white;
-  background-color: #56776c;
+  background-color: #357575;
 }
 
 .button:before {
@@ -44,7 +44,7 @@
 }
 
 .button:active:before {
-  background: #56776c;
+  background: #357575;
 }
 
 /* From cssbuttons.io */
@@ -80,17 +80,17 @@
   background-color: #357575;
 }
 
-.button:before {
+.button2:before {
   top: 100%;
   left: 100%;
   transition: all 0.7s;
 }
 
-.button:hover:before {
+.button2:hover:before {
   top: -300px;
   left: -30px;
 }
 
-.button:active:before {
-  background: #56776c;
+.button2:active:before {
+  background: #357575;
 }

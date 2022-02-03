@@ -7,8 +7,8 @@ import { LinkedinOutlined } from "@ant-design/icons";
 
 const Welcome = () => {
   return (
-    <section className=" h-screen w-screen">
-      <div className="pt-32">
+    <section className=" h-screen w-screen" id="Welcome">
+      <div className="pt-36">
         <h2 className="font-third text-seven text-5xl text-center">
           Maître Cécile Palavit
         </h2>

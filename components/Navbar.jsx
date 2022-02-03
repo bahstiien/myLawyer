@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import CPLogo from "../public/img/cpLogoBlack.jpg";
-import CPLogoTransparent from "../public/img/cpLogoTransparent.png";
-import style from "../styles/NavBar.module.css";
+
 import Link from "next/link";
 import logo from "../public/img/cpLogoWithText.png";
 import { signIn, signOut, useSession } from "next-auth/react";
@@ -12,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="w-full text-green-700 font-main fixed block z-50 bg-nav shadow-md">
+      <div className="w-full text-green-700 font-main fixed block z-50 shadow-md">
         <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
           <div className="flex flex-row items-center justify-between">
             <Link href="/">

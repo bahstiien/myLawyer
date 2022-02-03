@@ -39,12 +39,12 @@ const Dashboard = () => {
             </Link>
           </div>
           <div className="flex justify-center flex-wrap shadow-5xl">
-            {articles.map(({ id, title, description, link, createDate }) => (
+            {articles.map(({ id, title, description, link, createdAt }) => (
               <div className={style.card} key={id}>
                 <div className="flex justify-between mb-4">
                   <span className={style.id}> article# {id}</span>
                   <span className={style.id}>
-                    publié le {dayjs(createDate).format("DD/MM/YYYY")}
+                    publié le {dayjs(createdAt).format("DD/MM/YYYY")}
                   </span>
 
                   <div className="ml-4">

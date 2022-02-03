@@ -17,7 +17,6 @@ const articleToShow = {
   title: true,
   description: true,
   link: true,
-  createDate: true,
   summary: true,
 };
 
@@ -47,7 +46,6 @@ const createArticle = async ({ title, description, link, summary }) => {
       description,
       link,
       summary,
-      createDate: new Date(Date.now()),
     },
   });
 };

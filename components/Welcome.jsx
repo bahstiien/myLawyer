@@ -4,6 +4,7 @@ import cpalavit from "../public/img/cpalavit.jpg";
 import style from "../styles/welcome.module.css";
 import SectionLayout from "./Layout/SectionLayout";
 import { LinkedinOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const Welcome = () => {
   return (
@@ -48,7 +49,16 @@ const Welcome = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <LinkedinOutlined style={{ fontSize: "48px", color: "#0077b5" }} />
+          <Link
+            href="https://www.linkedin.com/in/c%C3%A9cile-palavit-5a765683/"
+            passHref
+          >
+            <a target="_blank">
+              <LinkedinOutlined
+                style={{ fontSize: "48px", color: "#0077b5" }}
+              />
+            </a>
+          </Link>
         </div>
       </div>
     </section>

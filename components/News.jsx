@@ -30,8 +30,8 @@ const News = () => {
             Publications
           </h2>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {articles.map(({ id, title, summary, link, createDate }) => (
+        <div className="mt-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+          {articles.map(({ id, title, summary, link, createdAt }) => (
             <div
               key={id}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
@@ -47,7 +47,7 @@ const News = () => {
                 </div>
                 <div className="mt-6 flex items-center ml-3">
                   <div className="flex space-x-1 italic text-sm text-gray-500 ">
-                    Publié le {dayjs(createDate).format("DD/MM/YYYY")}
+                    Publié le {dayjs(createdAt).format("DD/MM/YYYY")}
                   </div>
                   <div className="flex justify-center">
                     <Link href={`articles/${id}`} passHref>
@@ -59,18 +59,16 @@ const News = () => {
             </div>
           ))}
 
-          <div className="bg-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
-            <div className="items-center flex flex-col justify-center">
-              <p className="text-xl font-semibold text-gray-900">
-                Retrouvez l&#39;ensemble de mes Publications
-              </p>
-              <div className="flex justify-center">
-                <Link href={`articles`} passHref>
-                  <button className={stylebtn.button2}> Lire</button>
-                </Link>
+          <Link href={`articles`} passHref>
+            <div className="bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
+              <div className="items-center flex flex-col justify-center">
+                <p className="text-3xl text-center font-semibold">
+                  Retrouvez l&#39;ensemble de mes Publications
+                </p>
+                <div className="flex justify-center"></div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,82 +1,76 @@
 import React from "react";
-import Image from "next/image";
-import cpalavitLogo from "../public/img/cpLogoWithText.png";
 import { getCsrfToken } from "next-auth/react";
+import Layout from "../components/Layout/Layout";
 import { useRouter } from "next/dist/client/router";
 
 export default function LogIn({ csrfToken }) {
   const { query } = useRouter();
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="mt-8 justify-center  flex flex-col sm:mx-auto sm:w-full sm:max-w-md">
-        <Image
-          src={cpalavitLogo}
-          height={200}
-          width={250}
-          alt="photo of cecile palavit"
-        />
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form
-            className="mt-8 space-y-6"
-            method="post"
-            action="/api/auth/callback/credentials"
-          >
-            <input name="csrfToken" type="hidden" defaultValue={csrfToken} />{" "}
-            <input type="hidden" name="remember" defaultValue="true" />
+    <div>
+      <Layout title="Connectez-vous à votre compte">
+        <div className="min-h-full flex items-center justify-center py-12 pt-32 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full space-y-8">
             <div>
-              <label
-                htmlFor="email-address"
-                className="block text-sm font-medium text-gray-700"
+              <form
+                className="mt-8 space-y-6"
+                method="post"
+                action="/api/auth/callback/credentials"
               >
-                Email
-              </label>
-              <div className="mt-1">
                 <input
-                  id="email-address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
+                  name="csrfToken"
+                  type="hidden"
+                  defaultValue={csrfToken}
                 />
-              </div>
+
+                <input type="hidden" name="remember" defaultValue="true" />
+                <div className="rounded-md shadow-sm -space-y-px">
+                  <div>
+                    <label htmlFor="email-address" className="sr-only">
+                      Email
+                    </label>
+                    <input
+                      id="email-address"
+                      name="username"
+                      type="text"
+                      autoComplete="email"
+                      required
+                      className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="password" className="sr-only">
+                      Mot de passe
+                    </label>
+                    <input
+                      id="password"
+                      name="password"
+                      type="password"
+                      autoComplete="current-password"
+                      required
+                      className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                      placeholder="Mot de passe"
+                    />
+                  </div>
+                </div>
+                <button
+                  id="credentials-login-btn"
+                  className=" py-2 px-4 hover:bg-blue-300 bg-blue-400 focus:ring-blue-600 focus:ring-offset-red-200 text-gray-900 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg mb-10"
+                  type="submit"
+                >
+                  Se connecter
+                </button>
+                {query.error === "CredentialsSignin" && (
+                  <p className="p-2 text-red-600 text-xl font-bold text-center">
+                    {"Les identifiants ne correspondent pas "}
+                  </p>
+                )}
+              </form>
             </div>
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Password
-              </label>
-              <div className="mt-1">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                />
-              </div>
-            </div>
-            <div>
-              <button
-                type="submit"
-                id="credentials-login-btn"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-              >
-                Connexion
-              </button>
-              {query.error === "CredentialsSignin" && (
-                <p className="p-2 text-red-600 text-xl font-bold text-center">
-                  {"Les identifiants ne correspondent pas "}
-                </p>
-              )}
-            </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </Layout>
     </div>
   );
 }

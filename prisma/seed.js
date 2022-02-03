@@ -3,13 +3,21 @@ const db = require("../db");
 
 async function seed() {
   await db.user.deleteMany();
-  await db.user.create({
-    data: {
-      name: "Cécile",
-      email: "cecile.palavit@gmail.com",
-      role: "admin",
-      hashedPassword: await hashPassword("Pegasou"),
-    },
+  await db.user.createMany({
+    data: [
+      {
+        name: "Cécile",
+        email: "cecile.palavit@gmail.com",
+        role: "admin",
+        hashedPassword: await hashPassword("Pegasou"),
+      },
+      {
+        name: "Bastien",
+        email: "bastien@gmail.com",
+        role: "admin",
+        hashedPassword: await hashPassword("superadmin"),
+      },
+    ],
   });
   await db.article.deleteMany();
   await db.article.createMany({
@@ -23,7 +31,8 @@ async function seed() {
       },
       {
         title: "Mon second article",
-        description: "P2 description",
+        description:
+          "or sit amet, consectetur adipiscing elit. In tempor porta tortor, fringilla hendrerit justo feug",
         link: "https://www.lemoniteur.fr/technique/",
         summary: "Article assez court",
       },

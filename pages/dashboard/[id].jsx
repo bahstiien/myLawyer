@@ -12,6 +12,7 @@ export default function ArticleDetails() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [link, setLink] = useState("");
+  const [summary, setSummary] = useState("");
 
   const router = useRouter();
   const {
@@ -41,7 +42,7 @@ export default function ArticleDetails() {
     if (id && isUpdate) {
       axios
         .get(`/api/article/${id}`)
-        .then(({ data: { title, description, link } }) => {
+        .then(({ data: { title, description, link, summary } }) => {
           setTitle(title);
           setDescription(description), setLink(link);
         });
@@ -61,31 +62,38 @@ export default function ArticleDetails() {
               }}
             >
               <div className=" -mx-3 mb-6">
-                <div className="w-full  px-3 mb-4">
-                  <label className={style.label}>Désignation</label>
+                <div className="flex flex-col m-4">
+                  <label className={style.label}>Titre de l&#39;article</label>
                   <input
-                    className={style.input}
+                    className="h-12 w-auto ml-2 rounded-xl bg-one"
                     type="text"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                   />
                 </div>
-                <div className="w-full px-3">
+                <div className="flex flex-col m-4">
                   <label className={style.label}>Description</label>
-                  <input
-                    className={style.input}
+                  <textarea
+                    className="h-96 w-auto ml-2 rounded-xl bg-one p-2"
                     type="text"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                   />
                 </div>
-              </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full px-3">
-                  <label className={style.label}>Lien</label>
-
+                <div className="flex flex-col m-4">
+                  {" "}
+                  <label className={style.label}>Résumé rapide</label>
                   <input
-                    className={style.input}
+                    className="h-12 w-auto ml-2 rounded-xl bg-one"
+                    type="text"
+                    value={summary}
+                    onChange={(e) => setSummary(e.target.value)}
+                  />
+                </div>
+                <div className="flex flex-col m-4">
+                  <label className={style.label}>Lien</label>
+                  <input
+                    className="h-12 w-auto ml-2 rounded-xl bg-one"
                     type="text"
                     value={link}
                     onChange={(e) => setLink(e.target.value)}

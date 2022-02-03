@@ -8,8 +8,8 @@ export default function Layout({ children, pageTitle }) {
     <>
       <Head />
       <Navbar />
-      <h1 className="font-second text-center text-5xl"> {pageTitle}</h1>
-      <main>{children}</main>
+      <h1 className="font-second text-center text-5xl pt-32 "> {pageTitle}</h1>
+      <main className="font-thrid">{children}</main>
       <Footer />
     </>
   );

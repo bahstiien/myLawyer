@@ -4,6 +4,8 @@ import Layout from "../../components/Layout/Layout";
 import Link from "next/link";
 import styleBtn from "../../styles/button.module.css";
 import style from "../../styles/form.module.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ArticleDetails() {
   const [title, setTitle] = useState("");
@@ -12,13 +14,23 @@ export default function ArticleDetails() {
   const [summary, setSummary] = useState("");
 
   const onSubmit = (data) => {
-    axios.post("/api/article", { title, description, link, summary });
+    axios.post("/api/article", { title, description, link, summary }).then(
+      toast.success("Article en ligne !", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    );
   };
 
   return (
     <div className="">
       <Layout pageTitle="Nouvel article">
-        <div className="flex flex-col justify-center w-2/3 pt-32">
+        <div className=" flex flex-col justify-center w-2/3">
           <form className="justify-center font-main ml-24">
             <div className="">
               <div className="flex flex-col m-4">
@@ -68,6 +80,7 @@ export default function ArticleDetails() {
               Publiez un nouvel article
             </button>
           </form>
+          <ToastContainer />
         </div>
       </Layout>
     </div>

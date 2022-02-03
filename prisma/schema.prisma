@@ -19,11 +19,11 @@ model user {
 }
 
 model article {
-  id          Int       @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   title       String
-  description String    @db.LongText
+  description String   @db.LongText
   summary     String?
   link        String?
-  createDate  DateTime?
+  createdAt   DateTime @default(now())
 
 }

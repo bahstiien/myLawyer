@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import Link from "next/link";
 import { RollbackOutlined } from "@ant-design/icons";
 
-const Articles = () => {
+const Articles = ({ article }) => {
   const [articles, setArticles] = useState([]);
   const [error, setError] = useState("");
 
@@ -25,14 +25,14 @@ const Articles = () => {
         <h2 className="font-third text-seven text-5xl text-center mt-36">
           Actualités / Publications
         </h2>
-        {articles.map(({ id, title, description, link, createDate }) => (
+        {articles.map(({ id, title, description, link, createdAt }) => (
           <div
             className="max-w-4xl px-10 my-4 py-6 font-second bg-one rounded-lg shadow-md"
             key={id}
           >
             <div className="flex justify-end items-center">
               <span className="font-light text-gray-600">
-                Publié le {dayjs(createDate).format("DD/MM/YYYY")} par Cécile
+                Publié le {dayjs(createdAt).format("DD/MM/YYYY")} par Cécile
                 Palavit
               </span>
             </div>
@@ -68,3 +68,11 @@ const Articles = () => {
 };
 
 export default Articles;
+
+// export async function getStaticProps() {
+//   const articles = await getArticles();
+//   return {
+//     props: { articles },
+//     revalidate: 10,
+//   };
+// }

@@ -15,7 +15,7 @@ const News = () => {
   useEffect(() => {
     setError("");
     axios
-      .get("/api/article?limit=2")
+      .get("/api/article?limit=3")
       .then((res) => setArticles(res.data))
       .catch(() => setError("could not retrive article from the API"));
   }, []);
@@ -35,9 +35,9 @@ const News = () => {
           {articles.map(({ id, title, summary, createdAt }) => (
             <div
               key={id}
-              className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+              className="flex flex-row rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="flex-1 bg-one p-6 flex flex-col justify-between">
+              <div className="flex-1 bg-one w-96 p-6 flex flex-col justify-between">
                 <div className="flex-1">
                   <div className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">
@@ -59,18 +59,18 @@ const News = () => {
               </div>
             </div>
           ))}
-          <div className="m-6">
-            <Link href="/articles" passHref>
-              <div className="bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
-                <div className="items-center flex flex-col justify-center">
-                  <p className="text-3xl text-center font-semibold">
-                    Retrouvez l&#39;ensemble de mes Publications
-                  </p>
-                  <div className="flex justify-center"></div>
-                </div>
+        </div>
+        <div className="pt-12 flex justify-center">
+          <Link href="/articles" passHref>
+            <div className="w-1/2 bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6">
+              <div className="items-center flex flex-col justify-center">
+                <p className="text-3xl text-center font-semibold">
+                  Retrouvez l&#39;ensemble de mes Publications
+                </p>
+                <div className="flex justify-center"></div>
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

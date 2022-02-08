@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
           <div className="flex flex-row items-center justify-between">
             <Link href="/">
-              <a className="text-lg font-semibold tracking-widest text-green-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
+              <a className="text-lg z-50 font-semibold tracking-widest text-green-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
                 <Image
                   src={logo}
                   height={100}

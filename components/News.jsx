@@ -30,7 +30,7 @@ const News = () => {
             Publications
           </h2>
         </div>
-        <div className="mt-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+        <div className="flex justify-center mt-4 max-w-lg mx-auto  gap-5 lg:grid-cols-3 lg:max-w-none">
           {articles.map(({ id, title, summary, link, createdAt }) => (
             <div
               key={id}
@@ -58,17 +58,18 @@ const News = () => {
               </div>
             </div>
           ))}
-
-          <Link href="/articles" passHref>
-            <div className="bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
-              <div className="items-center flex flex-col justify-center">
-                <p className="text-3xl text-center font-semibold">
-                  Retrouvez l&#39;ensemble de mes Publications
-                </p>
-                <div className="flex justify-center"></div>
+          <div className="m-6">
+            <Link href="/articles" passHref>
+              <div className="bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
+                <div className="items-center flex flex-col justify-center">
+                  <p className="text-3xl text-center font-semibold">
+                    Retrouvez l&#39;ensemble de mes Publications
+                  </p>
+                  <div className="flex justify-center"></div>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

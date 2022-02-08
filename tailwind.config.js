@@ -23,4 +23,5 @@ module.exports = {
     },
     plugins: [],
   },
+  backgroundImage: { "nav-cover": "url('/public/img/navBar.png')" },
 };

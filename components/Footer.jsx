@@ -6,15 +6,20 @@ import cpalavitLogo from "../public/img/cpLogoWithText.png";
 
 const Footer = () => {
   return (
-    <footer className="mt-36">
+    <footer className="">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex  justify-center space-x-6 md:order-2">
-          <LinkedinOutlined style={{ fontSize: "48px", color: "#F8EDE3" }} />
+          <Link
+            href="https://www.linkedin.com/in/c%C3%A9cile-palavit-5a765683/"
+            passHref
+          >
+            <LinkedinOutlined style={{ fontSize: "48px", color: "#F8EDE3" }} />
+          </Link>
         </div>
         <Image
           src={cpalavitLogo}
           height={200}
-          width={260}
+          width={305}
           alt="photo of cecile palavit"
         />
 

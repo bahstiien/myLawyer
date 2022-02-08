@@ -29,13 +29,21 @@ const Dashboard = () => {
   };
   return (
     <div className="">
-      <Layout pageTitle="Dashboard">
+      <Layout>
         <AdminLayout>
-          <div className="pt-32 flex justify-center">
+          <h2 className="font-third text-seven text-5xl text-center">
+            Dashboard
+          </h2>
+          <div
+            className="
+         flex justify-center"
+          >
             <Link href="dashboard/newArticle" passHref>
-              <button className={stylebtn.button}>
-                <span>Nouvel article</span>
-              </button>
+              <a>
+                <button className={stylebtn.button}>
+                  <span>Nouvel article</span>
+                </button>
+              </a>
             </Link>
           </div>
           <div className="flex justify-center flex-wrap shadow-5xl">

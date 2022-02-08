@@ -4,8 +4,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-db-client": "npx prisma generate",
+    "migrate:dev": "npx prisma migrate dev",
+    "migrate:deploy": "npx prisma migrate deploy",
+    "pre-start": "NODE_ENV=production npm-run-all migrate:deploy generate-db-client build ",
+    "start": "NODE_ENV=production npm run start:server"
   },
   "dependencies": {
     "@prisma/client": "^3.9.0",

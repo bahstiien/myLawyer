@@ -21,7 +21,7 @@ const News = () => {
 
   return (
     <div
-      className="relative h-screen w-screen font-second pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+      className="relative w-screen font-second pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
       id="News"
     >
       <div className="relative max-w-7xl mx-auto">
@@ -38,12 +38,12 @@ const News = () => {
             >
               <div className="flex-1 bg-one p-6 flex flex-col justify-between">
                 <div className="flex-1">
-                  <p className="block mt-2">
+                  <div className="block mt-2">
                     <p className="text-xl font-semibold text-gray-900">
                       {title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">{summary}</p>
-                  </p>
+                  </div>
                 </div>
                 <div className="mt-6 flex items-center ml-3">
                   <div className="flex space-x-1 italic text-sm text-gray-500 ">
@@ -59,7 +59,7 @@ const News = () => {
             </div>
           ))}
 
-          <Link href={`articles`} passHref>
+          <Link href="/articles" passHref>
             <div className="bg-six cursor-pointer text-one rounded-lg justify-around shadow-lg overflow-hidden p-6 flex flex-col">
               <div className="items-center flex flex-col justify-center">
                 <p className="text-3xl text-center font-semibold">

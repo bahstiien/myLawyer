@@ -22,7 +22,7 @@ const Articles = ({ article }) => {
   return (
     <Layout>
       <div className=" flex flex-col items-center">
-        <h2 className="font-third text-seven text-5xl text-center mt-36">
+        <h2 className="font-third text-seven text-5xl text-center">
           Actualités / Publications
         </h2>
         {articles.map(({ id, title, description, link, createdAt }) => (

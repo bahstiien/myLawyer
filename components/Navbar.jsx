@@ -10,11 +10,11 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="w-full text-green-700 font-main fixed block z-50 bg-nav shadow-md">
+      <div className="w-full text-green-700 scrol font-main fixed block z-50 bg-nav shadow-md">
         <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
           <div className="flex flex-row items-center justify-between">
             <Link href="/">
-              <a className="text-lg z-50 font-semibold tracking-widest text-green-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">
+              <a className="text-lg z-50 font-semibold tracking-widest  uppercase rounded-lg focus:outline-none focus:shadow-outline">
                 <Image
                   src={logo}
                   height={100}
@@ -26,30 +26,26 @@ const Navbar = () => {
             <button className="rounded-lg md:hidden focus:outline-none focus:shadow-outline"></button>
           </div>
           <nav className="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a
-              className="px-4 py-2 mt-2 text-sm font-semibold text-seven  z-auto overflow-hidden rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
-              href="#Welcome"
-            >
-              Présentation
-            </a>
-            <a
-              className="px-4 py-2 mt-2 text-sm font-semibold text-seven  rounded-lg    md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
-              href="#Skill"
-            >
-              Domaines de compétences
-            </a>
-            <a
-              className="px-4 py-2 mt-2 text-sm font-semibold text-seven  rounded-lg   md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
-              href="#News"
-            >
-              Actualités / Publications
-            </a>
-            <a
-              className="px-4 py-2 mt-2 text-sm font-semibold text-seven rounded-lg    md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline"
-              href="#Contact"
-            >
-              Contact
-            </a>
+            <Link href="/#Welcome">
+              <a className="px-4 py-2 mt-2 text-sm font-semibold text-seven  z-auto overflow-hidden rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline">
+                Présentation
+              </a>
+            </Link>
+            <Link href="/#Skill">
+              <a className="px-4 py-2 mt-2 text-sm font-semibold text-seven  z-auto overflow-hidden rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline">
+                Domaine de compétences
+              </a>
+            </Link>
+            <Link href="/#News">
+              <a className="px-4 py-2 mt-2 text-sm font-semibold text-seven  z-auto overflow-hidden rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline">
+                Actualités/Publications
+              </a>
+            </Link>
+            <Link href="/#Contact">
+              <a className="px-4 py-2 mt-2 text-sm font-semibold text-seven  z-auto overflow-hidden rounded-lg md:mt-0 md:ml-4 hover:text-green-900 focus:text-green-900 hover:bg-green-200 focus:bg-green-200 focus:outline-none focus:shadow-outline">
+                Contact
+              </a>
+            </Link>
 
             {status === "authenticated" && (
               <button

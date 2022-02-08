@@ -38,11 +38,11 @@ const Welcome = () => {
               problématiques immobilières
             </p>
           </div>
-          <div className="hidden md:flex justify-end mx-24">
+          <div className="hidden md:flex justify-end max-h-sm max-w-sm mx-24">
             <Image
               src={cpalavit}
-              width={400}
-              height={380}
+              // layout={"fill"}
+              objectFit="cover"
               alt="photo of cecile palavit"
               className={style.photo}
             />

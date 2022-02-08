@@ -7,7 +7,16 @@ import {
 } from "../../../models/article.jsx";
 
 const handleGet = async (req, res) => {
-  res.send(await getArticles());
+  const { limit } = req.query;
+  res.send(
+    await getArticles({
+      limit,
+
+      orderBy: {
+        id: "DESC",
+      },
+    })
+  );
 };
 
 async function handlePost(req, res) {

@@ -15,7 +15,7 @@ const Articles = ({ article }) => {
   useEffect(() => {
     setError("");
     axios
-      .get("/api/article")
+      .get("/api/article?limit=1000")
       .then((res) => setArticles(res.data))
       .catch(() => setError("could not retrive article from the API"));
   }, []);

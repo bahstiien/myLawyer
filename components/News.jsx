@@ -6,6 +6,7 @@ import style from "../styles/articleList.module.css";
 import stylebtn from "../styles/button.module.css";
 import dayjs from "dayjs";
 import Link from "next/link";
+import moment from "moment";
 
 const News = () => {
   const [articles, setArticles] = useState([]);
@@ -14,7 +15,7 @@ const News = () => {
   useEffect(() => {
     setError("");
     axios
-      .get("/api/article")
+      .get("/api/article?limit=2")
       .then((res) => setArticles(res.data))
       .catch(() => setError("could not retrive article from the API"));
   }, []);
@@ -31,7 +32,7 @@ const News = () => {
           </h2>
         </div>
         <div className="flex justify-center mt-4 max-w-lg mx-auto  gap-5 lg:grid-cols-3 lg:max-w-none">
-          {articles.map(({ id, title, summary, link, createdAt }) => (
+          {articles.map(({ id, title, summary, createdAt }) => (
             <div
               key={id}
               className="flex flex-col rounded-lg shadow-lg overflow-hidden"
@@ -47,7 +48,7 @@ const News = () => {
                 </div>
                 <div className="mt-6 flex items-center ml-3">
                   <div className="flex space-x-1 italic text-sm text-gray-500 ">
-                    Publié le {dayjs(createdAt).format("DD/MM/YYYY")}
+                    Publié le {moment(createdAt).format(`DD/MM/YYYY`)}
                   </div>
                   <div className="flex justify-center">
                     <Link href={`articles/${id}`} passHref>

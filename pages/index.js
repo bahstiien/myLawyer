@@ -14,7 +14,7 @@ export default function Home() {
         <Welcome />
         <Skill />
         <News />
-        {/* <Last /> */}
+        <Last />
       </Layout>
     </div>
   );

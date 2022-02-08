@@ -6,6 +6,7 @@
     "build": "next build",
     "lint": "next lint",
     "generate-db-client": "npx prisma generate",
+    "start:server": "next start",
     "migrate:dev": "npx prisma migrate dev",
     "migrate:deploy": "npx prisma migrate deploy",
     "pre-start": "NODE_ENV=production npm-run-all migrate:deploy generate-db-client build ",

@@ -9,7 +9,7 @@ const Navbar = () => {
   const { data, user, role, status } = useSession();
 
   return (
-    <div className="">
+    <div className="font-third text-xl">
       <div className="w-full text-green-700 scrol font-main fixed block z-50 bg-nav shadow-md">
         <div className="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
           <div className="flex flex-row items-center justify-between">

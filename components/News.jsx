@@ -35,7 +35,7 @@ const News = () => {
           {articles.map(({ id, title, summary, createdAt }) => (
             <div
               key={id}
-              className="flex flex-row rounded-lg shadow-lg overflow-hidden"
+              className="flex flex-col rounded-lg shadow-lg overflow-hidden sm:flex-row"
             >
               <div className="flex-1 bg-one w-96 p-6 flex flex-col justify-between">
                 <div className="flex-1">

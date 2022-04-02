@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Welcome = () => {
   return (
-    <section className=" h-screen w-screen pt-36" id="Welcome">
+    <section className=" h-screen w-screen" id="Welcome">
       <div className="">
         <h2 className="font-third text-seven text-5xl text-center">
           Maître Cécile Palavit

@@ -6,7 +6,7 @@ const mentions = () => {
     <div>
       <Layout>
         <div className="m-6">
-          {/* <h2>Définitions</h2>
+          <h2>Définitions</h2>
           <p>
             <b>Client :</b> tout professionnel ou personne physique capable au
             sens des articles 1123 et suivants du Code civil, ou personne
@@ -39,8 +39,9 @@ const mentions = () => {
           <p>
             <b>Informations personnelles :</b> « Les informations qui
             permettent, sous quelque forme que ce soit, directement ou non,
-            l'identification des personnes physiques auxquelles elles
-            s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
+            l`&apos;`identification des personnes physiques auxquelles elles
+            s`&apos;`appliquent » (article 4 de la loi n° 78-17 du 6 janvier
+            1978).
           </p>
           <p>
             Les termes « données à caractère personnel », « personne concernée
@@ -50,13 +51,13 @@ const mentions = () => {
           </p>
           <h2>1. Présentation du site internet.</h2>
           <p>
-            En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour
-            la confiance dans l'économie numérique, il est précisé aux
-            utilisateurs du site internet{" "}
+            En vertu de l`&apos;`article 6 de la loi n° 2004-575 du 21 juin 2004
+            pour la confiance dans l`&apos;`économie numérique, il est précisé
+            aux utilisateurs du site internet{" "}
             <a href="http://cecile-palavit-avocat.com">
               http://cecile-palavit-avocat.com
             </a>{" "}
-            l'identité des différents intervenants dans le cadre de sa
+            l`&apos;`identité des différents intervenants dans le cadre de sa
             réalisation et de son suivi:
           </p>
           <p>
@@ -371,12 +372,13 @@ const mentions = () => {
           </p>
           <ul>
             <li>
-              droit d'accès (article 15 RGPD) et de rectification (article 16
-              RGPD), de mise à jour, de complétude des données des Utilisateurs
-              droit de verrouillage ou d’effacement des données des Utilisateurs
-              à caractère personnel (article 17 du RGPD), lorsqu’elles sont
-              inexactes, incomplètes, équivoques, périmées, ou dont la collecte,
-              l'utilisation, la communication ou la conservation est interdite{" "}
+              droit d`&apos;`accès (article 15 RGPD) et de rectification
+              (article 16 RGPD), de mise à jour, de complétude des données des
+              Utilisateurs droit de verrouillage ou d’effacement des données des
+              Utilisateurs à caractère personnel (article 17 du RGPD),
+              lorsqu’elles sont inexactes, incomplètes, équivoques, périmées, ou
+              dont la collecte, l`&apos;`utilisation, la communication ou la
+              conservation est interdite{" "}
             </li>
 
             <li>
@@ -520,33 +522,34 @@ const mentions = () => {
           <h2>8. Notification d’incident</h2>
           <p>
             Quels que soient les efforts fournis, aucune méthode de transmission
-            sur Internet et aucune méthode de stockage électronique n'est
+            sur Internet et aucune méthode de stockage électronique n`&apos;`est
             complètement sûre. Nous ne pouvons en conséquence pas garantir une
-            sécurité absolue. Si nous prenions connaissance d'une brèche de la
-            sécurité, nous avertirions les utilisateurs concernés afin qu'ils
-            puissent prendre les mesures appropriées. Nos procédures de
-            notification d’incident tiennent compte de nos obligations légales,
-            qu'elles se situent au niveau national ou européen. Nous nous
-            engageons à informer pleinement nos clients de toutes les questions
-            relevant de la sécurité de leur compte et à leur fournir toutes les
-            informations nécessaires pour les aider à respecter leurs propres
-            obligations réglementaires en matière de reporting.
+            sécurité absolue. Si nous prenions connaissance d`&apos;`une brèche
+            de la sécurité, nous avertirions les utilisateurs concernés afin
+            qu`&apos;`ils puissent prendre les mesures appropriées. Nos
+            procédures de notification d’incident tiennent compte de nos
+            obligations légales, qu`&apos;`elles se situent au niveau national
+            ou européen. Nous nous engageons à informer pleinement nos clients
+            de toutes les questions relevant de la sécurité de leur compte et à
+            leur fournir toutes les informations nécessaires pour les aider à
+            respecter leurs propres obligations réglementaires en matière de
+            reporting.
           </p>
           <p>
-            Aucune information personnelle de l'utilisateur du site{" "}
+            Aucune information personnelle de l`&apos;`utilisateur du site{" "}
             <a href="http://cecile-palavit-avocat.com">
               http://cecile-palavit-avocat.com
             </a>{" "}
-            n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée
-            ou vendue sur un support quelconque à des tiers. Seule l'hypothèse
-            du rachat de{" "}
+            n`&apos;`est publiée à l`&apos;`insu de l`&apos;`utilisateur,
+            échangée, transférée, cédée ou vendue sur un support quelconque à
+            des tiers. Seule l`&apos;`hypothèse du rachat de{" "}
             <a href="http://cecile-palavit-avocat.com">
               http://cecile-palavit-avocat.com
             </a>{" "}
             et de ses droits permettrait la transmission des dites informations
-            à l'éventuel acquéreur qui serait à son tour tenu de la même
+            à l`&apos;`éventuel acquéreur qui serait à son tour tenu de la même
             obligation de conservation et de modification des données vis à vis
-            de l'utilisateur du site{" "}
+            de l`&apos;`utilisateur du site{" "}
             <a href="http://cecile-palavit-avocat.com">
               http://cecile-palavit-avocat.com
             </a>
@@ -764,7 +767,7 @@ const mentions = () => {
             est soumis au droit français. En dehors des cas où la loi ne le
             permet pas, il est fait attribution exclusive de juridiction aux
             tribunaux compétents de Lyon
-          </p> */}
+          </p>
         </div>
       </Layout>
     </div>

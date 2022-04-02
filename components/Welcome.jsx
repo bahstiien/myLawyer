@@ -20,8 +20,9 @@ const Welcome = () => {
           <div className="w-full md:w-2/5">
             <p className={style.description}>
               Cécile Palavit est diplômée de l’université Paris 2 (Panthéon
-              Assas) en droit public des affaires et en droit de l’immobilier et
-              de la construction.
+              Assas) en droit public de l’économie et en droit de l’immobilier
+              et de la construction. Elle a réalisé sa formation d’avocat au
+              sein de l’Ecole de Formation des Barreaux (Paris).
             </p>
             <p className={style.description}>
               Elle a prêté serment en 2016 devant la Cour d’Appel de Paris et a

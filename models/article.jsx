@@ -21,30 +21,9 @@ const articleToShow = {
   createdAt: true,
 };
 
-const getEstimates = async ({
-  statusList,
-  limit,
-  offset,
-  customerId,
-  orderBy,
-}) => {
-  return Promise.all([
-    db.estimate.findMany({
-      where: { status: { in: statusList }, customer: { id: customerId } },
-      select: estimatePropsToShow,
-      take: parseInt(limit),
-      skip: parseInt(offset),
-      orderBy,
-    }),
-    db.estimate.count({
-      where: { status: { in: statusList }, customer: { id: customerId } },
-    }),
-  ]);
-};
-
 const getArticles = async (limit) => {
   return db.article.findMany({
-    take: parseInt(Object.values(limit)),
+    //take: limit,
     select: articleToShow,
     orderBy: {
       createdAt: "asc",

@@ -7,6 +7,8 @@ import Layout from "../../components/Layout/Layout";
 import dayjs from "dayjs";
 import Link from "next/link";
 import { RollbackOutlined } from "@ant-design/icons";
+import { getArticles } from "../../models/article";
+import safeJsonStringify from "safe-json-stringify";
 
 const Articles = ({ article }) => {
   const [articles, setArticles] = useState([]);
@@ -69,10 +71,18 @@ const Articles = ({ article }) => {
 
 export default Articles;
 
-// export async function getStaticProps() {
-//   const articles = await getArticles();
-//   return {
-//     props: { articles },
-//     revalidate: 10,
-//   };
-// }
+export const getStaticProps = async () => {
+  try {
+    const articles = await getArticles();
+    const stringifiedData = safeJsonStringify(articles);
+    const data = JSON.parse(stringifiedData);
+
+    return {
+      props: { data },
+      revalidate: 10,
+    };
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};

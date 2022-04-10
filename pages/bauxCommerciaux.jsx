@@ -80,7 +80,7 @@ const bauxCommerciaux = () => {
           </article>
         </div>
         <div className="flex justify-center">
-<Link href="/#Contact">
+<Link passHref href="/#Contact">
       <button className={styleBtn.button3}> Contactez moi </button>
       </Link>
   </div>
@@ -177,7 +177,7 @@ const bauxCommerciaux = () => {
       </div>
 
 <div className="flex justify-center">
-<Link href="/#Contact">
+<Link passHref href="/#Contact">
       <button className={styleBtn.button3}> Contactez moi </button>
       </Link>
   </div>

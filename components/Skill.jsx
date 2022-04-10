@@ -6,6 +6,7 @@ import brick from "../public/img/brick.png";
 import shop from "../public/img/shop.png";
 import document from "../public/img/document.png";
 import Link from "next/link";
+
 const Skill = () => {
   return (
     <section className="h-full w-full md:h-screen md:w-screen pt-36" id="Skill">

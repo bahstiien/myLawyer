@@ -37,11 +37,11 @@ const Footer = () => {
                 Marie Adam
               </Link>
             </span>{" "}
-            {/* <span>
-              <Link href="/mentions">- Mentions légales</Link>
-            </span>{" "} */}
           </p>
-          <p>Tous droits réservés</p>
+          <span>
+            <Link href="/mentions">Mentions légales</Link>
+          </span>
+          <span> - Tous droits réservés</span>
         </div>
       </div>
     </footer>

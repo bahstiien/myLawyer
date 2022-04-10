@@ -16,27 +16,13 @@ const Welcome = () => {
         <p className="font-third text-six text-xl text-center">
           Avocat au barreau de Lyon
         </p>
-        <div className="flex justify-around mt-8 flex-col md:flex-row">
+        <div className="flex justify-around mt-8 flex-col items-center md:flex-row ">
           <div className="w-full md:w-2/5">
             <p className={style.description}>
-              Cécile Palavit est diplômée de l’université Paris 2 (Panthéon
-              Assas) en droit public de l’économie et en droit de l’immobilier
-              et de la construction. Elle a réalisé sa formation d’avocat au
-              sein de l’Ecole de Formation des Barreaux (Paris).
-            </p>
-            <p className={style.description}>
-              Elle a prêté serment en 2016 devant la Cour d’Appel de Paris et a
-              exercé durant 4 ans au sein des cabinets Gide Loyrette Nouel et
-              Freshfields Bruckhaus Deringer avant de rejoindre la direction
-              juridique du Paris-Saint-Germain.
-            </p>
-            <p className={style.description}>
-              Depuis 2021, Me Palavit est inscrite au Barreau de Lyon. Elle
-              exerce en qualité de collaboratrice libérale au sein du cabinet
-              Adaltys et intervient en tant que consultante au sein du cabinet
-              Lexinsight. Cécile Palavit conseille et représente des entreprises
-              et des particuliers dans le cadre de leurs projets et
-              problématiques immobilières
+              Maître Cécile Palavit est avocat, inscrite au Barreau de Lyon.
+              Elle exerce principalement en droit immobilier, droit public et
+              droit des contrats, en conseil et contentieux devant les
+              juridictions.
             </p>
           </div>
           <div className="hidden md:flex justify-end max-h-sm max-w-sm mx-24">

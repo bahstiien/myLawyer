@@ -5,6 +5,7 @@ import building from "../public/img/building.png";
 import brick from "../public/img/brick.png";
 import shop from "../public/img/shop.png";
 import document from "../public/img/document.png";
+import Link from "next/link";
 const Skill = () => {
   return (
     <section className="h-full w-full md:h-screen md:w-screen pt-36" id="Skill">
@@ -67,8 +68,8 @@ const Skill = () => {
                       alt="building"
                     />
                   </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
-                    Baux
+                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 cursor-pointer">
+                    <Link href="/bauxCommerciaux">Baux</Link>
                   </p>
                 </dt>
                 <dd className="mt-2 text-base text-seven">Baux commerciaux</dd>

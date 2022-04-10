@@ -11,7 +11,7 @@ const Skill = () => {
   return (
     <section className="h-full w-full md:h-screen md:w-screen pt-36" id="Skill">
       <h2 className="pt-24 font-third text-seven text-5xl text-center sm:pt-0 ">
-        Domaines de compétences
+        Domaines de compétences -
       </h2>
 
       <div className=" overflow-hidden">

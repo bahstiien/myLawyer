@@ -1,6 +1,6 @@
 {
   "name": "mylawyerfront",
-  "private": true,
+  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +10,7 @@
     "migrate:dev": "npx prisma migrate dev",
     "migrate:deploy": "npx prisma migrate deploy",
     "pre-start": "NODE_ENV=production npm-run-all migrate:deploy generate-db-client build ",
+
     "start": "NODE_ENV=production npm run start:server"
   },
   "dependencies": {

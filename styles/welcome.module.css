@@ -7,7 +7,6 @@
 .description {
   font-size: 1rem;
   margin: 25px;
-  text-align: center;
 }
 
 .baux {
@@ -19,6 +18,12 @@
   font-size: 2.5rem;
   text-align: center;
   margin: 20px;
+}
+
+.illustration {
+ width:80%;
+ 
+
 }
 
 

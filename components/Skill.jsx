@@ -68,12 +68,21 @@ const Skill = () => {
                       alt="building"
                     />
                   </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 cursor-pointer">
-                    <Link href="/bauxCommerciaux">Baux</Link>
+                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
+                    Baux
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-seven">Baux commerciaux</dd>
-                <dd className="mt-2 text-base text-seven">Baux d’habitation</dd>
+                <Link href="/bauxCommerciaux" passHref>
+                  <dd className="mt-2 text-base text-seven cursor-pointer">
+                    Baux commerciaux
+                  </dd>
+                </Link>
+
+                <Link href="/bauxHabitation" passHref>
+                  <dd className="mt-2 text-base text-seven cursor-pointer">
+                    Baux d&apos;habitation
+                  </dd>
+                </Link>
               </div>
 
               <div>

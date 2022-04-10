@@ -8,7 +8,10 @@ const Price = () => {
           Honoraires
         </h2>
         <div className="font-second text-center m-4 p-4">
-          <p className="mt-2 text-lg text-seven">Premier échange non facturé</p>
+          <p className="mt-2 text-lg text-seven">
+            Premier échange de prise de connaissance du dossier et des
+            problématiques non facturé (hors consultation juridique orale)
+          </p>
           <p className="mt-2 text-lg text-seven">
             {" "}
             Devis / estimation préalable à tout commencement d&#39;éxécution

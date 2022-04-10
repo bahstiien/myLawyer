@@ -38,10 +38,12 @@ const Footer = () => {
               </Link>
             </span>{" "}
           </p>
-          <span>
-            <Link href="/mentions">Mentions légales</Link>
-          </span>
-          <span> - Tous droits réservés</span>
+          <div className="mt-8 md:mt-0 md:order-1  text-center text-base text-gray-900 opacity-60">
+            <span>
+              <Link href="/mentions">Mentions légales</Link>
+            </span>
+            <span> - Tous droits réservés</span>
+          </div>
         </div>
       </div>
     </footer>

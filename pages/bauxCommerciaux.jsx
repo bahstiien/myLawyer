@@ -3,6 +3,8 @@ import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import style from "../styles/welcome.module.css";
 import contract from "../public/img/contract.jpeg";
+import  styleBtn from "../styles/button.module.css";
+import Link from "next/link";
 
 const bauxCommerciaux = () => {
   return (
@@ -10,14 +12,16 @@ const bauxCommerciaux = () => {
       <div>
         <h1 className={style.title}> Baux commerciaux</h1>
         <div className="">
-          <article className="flex m-4 text-center italic ">
-            <Image
-              src={contract}
-              height={1000}
-              width={1600}
-              alt="photo of cecile palavit"
-              className={style.illustration}
-            />
+          <article className="flex m-4  italic ">
+            {/* <div className={style.illustration}>
+              <Image
+                src={contract}
+                height={1000}
+                width={1600}
+                alt="photo of cecile palavit"
+              />
+            </div> */}
+
             <div className="m-2">
               <p className={style.baux}>
                 En France, le régime des baux commerciaux est encadré par les
@@ -75,57 +79,108 @@ const bauxCommerciaux = () => {
             </div>
           </article>
         </div>
+        <div className="flex justify-center">
+<Link href="/#Contact">
+      <button className={styleBtn.button3}> Contactez moi </button>
+      </Link>
+  </div>
       </div>
 
-      <article className={style.box}>
-        <ul className="list-disc">
-          <li>
-            Vous êtes propriétaire d’un bien que vous souhaitiez donner à bail à
-            une entreprise ou à un artisan ;
+    
+
+      <div className="container mb-2 flex mx-auto w-full items-center justify-center">
+        <ul className="flex flex-col p-4">
+          <li className=" m-4 flex flex-row">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                  Vous êtes propriétaire d’un bien que vous souhaitiez donner à
+                  bail à une entreprise ou à un artisan
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            Vous souhaitez actualiser ou renégocier un bail en cours ou arrivé à
-            échéance ;
+          <li className=" m-4 flex flex-row ">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                  Vous souhaitez actualiser ou renégocier un bail en cours ou
+                  arrivé à échéance
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            Vous êtes un professionnel, commerçant, entreprise ou artisan et
-            souhaitez vous faire accompagner dans le cadre de la rédaction et
-            négociation de votre bail ;
+          <li className=" m-4 flex flex-row">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                  Vous êtes un professionnel, commerçant, entreprise ou artisan
+                  et souhaitez vous faire accompagner dans le cadre de la
+                  rédaction et négociation de votre bail
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            {" "}
-            Vous souhaitez délivrer ou avez reçu un congé avec ou sans offre de
-            renouvellement pour la date anniversaire du bail ou en cours de
-            tacite prolongation ;{" "}
+          <li className=" m-4 flex flex-row">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                  Vous souhaitez délivrer ou avez reçu un congé avec ou sans
+                  offre de renouvellement pour la date anniversaire du bail ou
+                  en cours de tacite prolongation
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            {" "}
-            Vous souhaitez vous faire conseiller dans le cadre d’une procédure
-            amiable ou judiciaire relative à la fixation du loyer de
-            renouvellement, de l’indemnité d’éviction ou de l’indemnité
-            d’occupation{" "}
+      
+
+          <li className=" m-4 flex flex-row">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                Vous souhaitez vous faire conseiller dans le cadre d’une procédure amiable ou judiciaire relative à la fixation du loyer de renouvellement, de l’indemnité d’éviction ou de l’indemnité d’occupation
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            {" "}
-            Vous avez des questions ou êtes en précontentieux ou en litige avec
-            votre locataire ou votre propriétaire concernant la réalisation ou
-            la prise en charge de travaux au sein des locaux{" "}
+
+          <li className=" m-4 flex flex-row">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                Vous avez des questions ou êtes en précontentieux ou en litige avec votre locataire ou votre propriétaire concernant la réalisation ou la prise en charge de travaux au sein des locaux
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            {" "}
-            vous avez des questions concernant la sous-location, la
-            location-gérance, la cession d’un fonds de commerce ou
-            souhaitez-vous faire accompagner dans le cadre de démarches
-            relatives à ses situations ;{" "}
+
+          <li className=" m-4 flex flex-row ">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                Vous avez des questions concernant la sous-location, la location-gérance, la cession d’un fonds de commerce ou souhaitez-vous faire accompagner dans le cadre de démarches relatives à ses situations
+                </div>
+              </div>
+            </div>
           </li>
-          <li>
-            {" "}
-            vous souhaitez conclure un bail dérogatoire, un bail précaire ou un
-            bail saisonnier et souhaitez vous faire accompagner dans le cadre de
-            sa négociation et de sa rédaction
+
+          <li className=" m-4 flex flex-row ">
+            <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
+              <div className="flex-1 pl-1 mr-16">
+                <div className="font-medium">
+                Vous souhaitez conclure un bail dérogatoire, un bail précaire ou un bail saisonnier et souhaitez vous faire accompagner dans le cadre de sa négociation et de sa rédaction
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
-      </article>
+      </div>
+
+<div className="flex justify-center">
+<Link href="/#Contact">
+      <button className={styleBtn.button3}> Contactez moi </button>
+      </Link>
+  </div>
     </Layout>
   );
 };

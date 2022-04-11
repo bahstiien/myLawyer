@@ -1,9 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import style from "../styles/welcome.module.css";
-import contract from "../public/img/contract.jpeg";
-import  styleBtn from "../styles/button.module.css";
+import styleBtn from "../styles/button.module.css";
 import Link from "next/link";
 
 const bauxCommerciaux = () => {
@@ -80,13 +78,11 @@ const bauxCommerciaux = () => {
           </article>
         </div>
         <div className="flex justify-center">
-<Link passHref href="/#Contact">
-      <button className={styleBtn.button3}> Contactez moi </button>
-      </Link>
-  </div>
+          <Link passHref href="/#Contact">
+            <button className={styleBtn.button3}> Contactez moi </button>
+          </Link>
+        </div>
       </div>
-
-    
 
       <div className="container mb-2 flex mx-auto w-full items-center justify-center">
         <ul className="flex flex-col p-4">
@@ -132,13 +128,15 @@ const bauxCommerciaux = () => {
               </div>
             </div>
           </li>
-      
 
           <li className=" m-4 flex flex-row">
             <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
               <div className="flex-1 pl-1 mr-16">
                 <div className="font-medium">
-                Vous souhaitez vous faire conseiller dans le cadre d’une procédure amiable ou judiciaire relative à la fixation du loyer de renouvellement, de l’indemnité d’éviction ou de l’indemnité d’occupation
+                  Vous souhaitez vous faire conseiller dans le cadre d’une
+                  procédure amiable ou judiciaire relative à la fixation du
+                  loyer de renouvellement, de l’indemnité d’éviction ou de
+                  l’indemnité d’occupation
                 </div>
               </div>
             </div>
@@ -148,7 +146,10 @@ const bauxCommerciaux = () => {
             <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
               <div className="flex-1 pl-1 mr-16">
                 <div className="font-medium">
-                Vous avez des questions ou êtes en précontentieux ou en litige avec votre locataire ou votre propriétaire concernant la réalisation ou la prise en charge de travaux au sein des locaux
+                  Vous avez des questions ou êtes en précontentieux ou en litige
+                  avec votre locataire ou votre propriétaire concernant la
+                  réalisation ou la prise en charge de travaux au sein des
+                  locaux
                 </div>
               </div>
             </div>
@@ -158,7 +159,10 @@ const bauxCommerciaux = () => {
             <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
               <div className="flex-1 pl-1 mr-16">
                 <div className="font-medium">
-                Vous avez des questions concernant la sous-location, la location-gérance, la cession d’un fonds de commerce ou souhaitez-vous faire accompagner dans le cadre de démarches relatives à ses situations
+                  Vous avez des questions concernant la sous-location, la
+                  location-gérance, la cession d’un fonds de commerce ou
+                  souhaitez-vous faire accompagner dans le cadre de démarches
+                  relatives à ses situations
                 </div>
               </div>
             </div>
@@ -168,7 +172,9 @@ const bauxCommerciaux = () => {
             <div className="select-none flex flex-1 items-center transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl  p-6 hover:shadow-2xl hover:bg-teal-600">
               <div className="flex-1 pl-1 mr-16">
                 <div className="font-medium">
-                Vous souhaitez conclure un bail dérogatoire, un bail précaire ou un bail saisonnier et souhaitez vous faire accompagner dans le cadre de sa négociation et de sa rédaction
+                  Vous souhaitez conclure un bail dérogatoire, un bail précaire
+                  ou un bail saisonnier et souhaitez vous faire accompagner dans
+                  le cadre de sa négociation et de sa rédaction
                 </div>
               </div>
             </div>
@@ -176,11 +182,11 @@ const bauxCommerciaux = () => {
         </ul>
       </div>
 
-<div className="flex justify-center">
-<Link passHref href="/#Contact">
-      <button className={styleBtn.button3}> Contactez moi </button>
-      </Link>
-  </div>
+      <div className="flex justify-center">
+        <Link passHref href="/#Contact">
+          <button className={styleBtn.button3}> Contactez moi </button>
+        </Link>
+      </div>
     </Layout>
   );
 };

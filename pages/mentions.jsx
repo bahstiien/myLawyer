@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
+import style from "../styles/welcome.module.css";
 
 const mentions = () => {
   return (

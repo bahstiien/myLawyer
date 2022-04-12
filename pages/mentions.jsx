@@ -24,7 +24,8 @@ const mentions = () => {
             Palavit - SIREN : N°822384517 - Numéro de TVA: FR79822384517 – 55
             boulevard des brotteaux 69006 Lyon <br /> <br />
             <strong>Responsable publication</strong> : Cécile Palavit –
-            (personne physique) contact@cecile-palavit-avocat.com
+            (personne physique) contact@cecile-palavit-avocat.com - 55 boulevard
+            des Brotteaux 69006 LYON - 0761697971
             <br />
             <br />
             <strong> Hebergeur : </strong> société OVH, SAS au capital de 10 069
